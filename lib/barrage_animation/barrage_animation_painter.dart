@@ -108,18 +108,20 @@ class _AnimationWidgetState extends State<_AnimationWidget> with SingleTickerPro
 
     return SlideTransition(
       position: _offsetAnimation,
-      child: FittedBox(
-        fit: BoxFit.contain,
-        child: SizedBox(
-          width: screenWidth / 4,
-          height: screenWidth / 4,
-          child: barrage.text.isNotEmpty
-              ? Text(barrage.text)
-              : Image.network(
+      child: SizedBox(
+        width: screenWidth / 4,
+        height: screenWidth / 4,
+        child: barrage.text.isNotEmpty
+            ? Text(barrage.text)
+            : ClipRRect(
+                borderRadius: BorderRadius.circular(12.0),
+                child: Image.network(
                   barrage.imgUrl,
+                  width: 40,
+                  height: 40,
                   fit: BoxFit.cover,
                 ),
-        ),
+              ),
       ),
     );
   }
