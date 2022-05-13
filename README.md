@@ -1,6 +1,6 @@
 # barrage_animation
 
-<img src="demo/app.gif" />
+<img src="demo/app.gif" width="300" />
 
 ## Introduction
 
